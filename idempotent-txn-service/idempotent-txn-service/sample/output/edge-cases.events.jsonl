@@ -1,0 +1,31 @@
+{"ts":"2026-10-28T05:43:27.567678922Z","event":"RECEIVED","row":2,"transactionId":"TXN-3001","requestId":"REQ-A1","sequence":1,"account":"***301"}
+{"ts":"2026-10-28T05:43:27.578965551Z","event":"PROCESSING","transactionId":"TXN-3001","attempt":1}
+{"ts":"2026-10-28T05:43:27.591838625Z","event":"PROCESSED","transactionId":"TXN-3001","attempts":1}
+{"ts":"2026-10-28T05:43:27.596242762Z","event":"RECEIVED","row":3,"transactionId":"TXN-3003","requestId":"REQ-A3","sequence":3,"account":"***301"}
+{"ts":"2026-10-28T05:43:27.596434790Z","event":"PENDING_ORDER","transactionId":"TXN-3003","sequence":3,"expectedSequence":2}
+{"ts":"2026-10-28T05:43:27.596543535Z","event":"RECEIVED","row":4,"transactionId":"TXN-3002","requestId":"REQ-A2","sequence":2,"account":"***301"}
+{"ts":"2026-10-28T05:43:27.596604050Z","event":"PROCESSING","transactionId":"TXN-3002","attempt":1}
+{"ts":"2026-10-28T05:43:27.596690461Z","event":"PROCESSED","transactionId":"TXN-3002","attempts":1}
+{"ts":"2026-10-28T05:43:27.596783577Z","event":"RELEASED_FROM_BUFFER","transactionId":"TXN-3003"}
+{"ts":"2026-10-28T05:43:27.596836692Z","event":"PROCESSING","transactionId":"TXN-3003","attempt":1}
+{"ts":"2026-10-28T05:43:27.596904103Z","event":"PROCESSED","transactionId":"TXN-3003","attempts":1}
+{"ts":"2026-10-28T05:43:27.611294012Z","event":"DUPLICATE","row":5,"transactionId":"TXN-3001","requestId":"REQ-A1-RETRY","matchedOn":"TRANSACTION_ID_REPLAY","originalStatus":"PROCESSED"}
+{"ts":"2026-10-28T05:43:27.611619590Z","event":"DUPLICATE","row":6,"transactionId":"TXN-3002","requestId":"REQ-A2","matchedOn":"REQUEST_ID_REPLAY","originalStatus":"PROCESSED"}
+{"ts":"2026-10-28T05:43:27.611808638Z","event":"RECEIVED","row":7,"transactionId":"TXN-3004","requestId":"REQ-A4","sequence":4,"account":"***302"}
+{"ts":"2026-10-28T05:43:27.611883244Z","event":"PROCESSING","transactionId":"TXN-3004","attempt":1}
+{"ts":"2026-10-28T05:43:27.614223508Z","event":"FAILED","transactionId":"TXN-3004","reason":"INSUFFICIENT_FUNDS","attempts":1,"detail":"debit exceeds available balance"}
+{"ts":"2026-10-28T05:43:27.614508851Z","event":"RECEIVED","row":8,"transactionId":"TXN-3005","requestId":"REQ-A5","sequence":5,"account":"***302"}
+{"ts":"2026-10-28T05:43:27.614580135Z","event":"PROCESSING","transactionId":"TXN-3005","attempt":1}
+{"ts":"2026-10-28T05:43:27.621106027Z","event":"RETRY_SCHEDULED","transactionId":"TXN-3005","failedAttempt":1}
+{"ts":"2026-10-28T05:43:27.671599526Z","event":"PROCESSING","transactionId":"TXN-3005","attempt":2}
+{"ts":"2026-10-28T05:43:27.672512436Z","event":"RETRY_SCHEDULED","transactionId":"TXN-3005","failedAttempt":2}
+{"ts":"2026-10-28T05:43:27.773070806Z","event":"PROCESSING","transactionId":"TXN-3005","attempt":3}
+{"ts":"2026-10-28T05:43:27.775168339Z","event":"FAILED","transactionId":"TXN-3005","reason":"RETRY_EXHAUSTED","attempts":3,"detail":"gave up after 3 attempts"}
+{"ts":"2026-10-28T05:43:27.775587366Z","event":"RECEIVED","row":9,"transactionId":"TXN-3007","requestId":"REQ-A7","sequence":7,"account":"***301"}
+{"ts":"2026-10-28T05:43:27.775695312Z","event":"PENDING_ORDER","transactionId":"TXN-3007","sequence":7,"expectedSequence":6}
+{"ts":"2026-10-28T05:43:27.777186214Z","event":"VALIDATION_FAILED","row":10,"errors":"currency must be a 3-letter ISO 4217 code"}
+{"ts":"2026-10-28T05:43:27.777872888Z","event":"SEQUENCE_SKIPPED","sequence":8,"reason":"INVALID_RECORD"}
+{"ts":"2026-10-28T05:43:27.779297882Z","event":"DUPLICATE","row":11,"transactionId":"TXN-3001","requestId":"REQ-A1-X","matchedOn":"TRANSACTION_ID_REPLAY","originalStatus":"PROCESSED"}
+{"ts":"2026-10-28T05:43:27.779385527Z","event":"PAYLOAD_MISMATCH","transactionId":"TXN-3001","row":11}
+{"ts":"2026-10-28T05:43:27.780854489Z","event":"VALIDATION_FAILED","row":12,"errors":"row has 5 columns, expected 7; transactionId is required; requestId is required; accountId is required; sequenceNumber is required; transactionType is required; amount is required; currency is required"}
+{"ts":"2026-10-28T05:43:27.798826168Z","event":"BATCH_COMPLETE","rows":11,"processed":3,"duplicates":3,"failed":4,"pendingOrder":1,"retries":2}

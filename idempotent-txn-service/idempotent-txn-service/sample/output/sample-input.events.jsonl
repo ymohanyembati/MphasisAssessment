@@ -1,0 +1,20 @@
+{"ts":"2026-10-28T05:43:27.213932376Z","event":"RECEIVED","row":2,"transactionId":"TXN-2002","requestId":"REQ-2","sequence":2,"account":"***201"}
+{"ts":"2026-10-28T05:43:27.227198578Z","event":"PENDING_ORDER","transactionId":"TXN-2002","sequence":2,"expectedSequence":1}
+{"ts":"2026-10-28T05:43:27.227875255Z","event":"RECEIVED","row":3,"transactionId":"TXN-2001","requestId":"REQ-1","sequence":1,"account":"***201"}
+{"ts":"2026-10-28T05:43:27.227978819Z","event":"PROCESSING","transactionId":"TXN-2001","attempt":1}
+{"ts":"2026-10-28T05:43:27.251945446Z","event":"PROCESSED","transactionId":"TXN-2001","attempts":1}
+{"ts":"2026-10-28T05:43:27.253296231Z","event":"RELEASED_FROM_BUFFER","transactionId":"TXN-2002"}
+{"ts":"2026-10-28T05:43:27.253376627Z","event":"PROCESSING","transactionId":"TXN-2002","attempt":1}
+{"ts":"2026-10-28T05:43:27.253462491Z","event":"PROCESSED","transactionId":"TXN-2002","attempts":1}
+{"ts":"2026-10-28T05:43:27.276532626Z","event":"DUPLICATE","row":4,"transactionId":"TXN-2002","requestId":"REQ-2-DUP","matchedOn":"TRANSACTION_ID_REPLAY","originalStatus":"PROCESSED"}
+{"ts":"2026-10-28T05:43:27.278435677Z","event":"RECEIVED","row":5,"transactionId":"TXN-2003","requestId":"REQ-3","sequence":3,"account":"***201"}
+{"ts":"2026-10-28T05:43:27.279490423Z","event":"PROCESSING","transactionId":"TXN-2003","attempt":1}
+{"ts":"2026-10-28T05:43:27.279703244Z","event":"PROCESSED","transactionId":"TXN-2003","attempts":1}
+{"ts":"2026-10-28T05:43:27.280976508Z","event":"VALIDATION_FAILED","row":6,"errors":"amount must be greater than zero"}
+{"ts":"2026-10-28T05:43:27.281425519Z","event":"SEQUENCE_SKIPPED","sequence":4,"reason":"INVALID_RECORD"}
+{"ts":"2026-10-28T05:43:27.281581873Z","event":"RECEIVED","row":7,"transactionId":"TXN-2005","requestId":"REQ-5","sequence":5,"account":"***203"}
+{"ts":"2026-10-28T05:43:27.281649625Z","event":"PROCESSING","transactionId":"TXN-2005","attempt":1}
+{"ts":"2026-10-28T05:43:27.290215213Z","event":"RETRY_SCHEDULED","transactionId":"TXN-2005","failedAttempt":1}
+{"ts":"2026-10-28T05:43:27.341668547Z","event":"PROCESSING","transactionId":"TXN-2005","attempt":2}
+{"ts":"2026-10-28T05:43:27.341925180Z","event":"PROCESSED","transactionId":"TXN-2005","attempts":2}
+{"ts":"2026-10-28T05:43:27.348141218Z","event":"BATCH_COMPLETE","rows":6,"processed":4,"duplicates":1,"failed":1,"pendingOrder":0,"retries":1}
